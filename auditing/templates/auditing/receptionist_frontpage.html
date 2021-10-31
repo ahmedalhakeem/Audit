@@ -1,0 +1,44 @@
+{% extends 'auditing/layout.html' %}
+{% load static %}
+{% block title %}
+معلومات المراجع
+{% endblock %}
+{% block content %}
+    <h1>ادخال معلومات الجهة المراجعة </h1>
+      <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">اسم المؤسسة</label>
+            <input class="form-control" type="text" name="company_name"  placeholder="اسم المؤسسة">
+        </div>
+        <div class="form-group">
+            <label for="">اسم المخول </label>
+            <input class="form-control" type="text" name="delegated_person" placeholder="اسم المخول">
+        </div>
+        <div class="form-group">
+            <label for="">عنوان المؤسسة</label>
+            <input class="form-control" type="text" name="company_address" placeholder="عنوان المؤسسة">
+        </div>
+        <div class="form-group">
+            <label for="">رقم التواصل</label>
+            <input class="form-control" type="text" name="phone_number" placeholder="رقم الهاتف للمؤسسة">
+        </div>
+        <div class="form-group">
+            <label for="">سبب المراجعة</label>
+            <input class="form-control" type="text" name="reason" placeholder="سبب المراجعة">
+        </div>
+        
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option value=""> اسم الموظف المختص الأول</option>
+        </select>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option value="">اسم الموظف المختص الثاني</option>
+        </select>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option value="">اسم الموظف المختص الثالث</option>
+        </select>
+        <div class="form-group">
+            <label for="">الملاحظات ( ان وجدت ) </label>
+            <input class="form-control" type="text" name="reason" placeholder="الملاحظات">
+        </div>
+    </form>
+{% endblock %}

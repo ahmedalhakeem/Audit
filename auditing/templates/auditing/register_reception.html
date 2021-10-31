@@ -1,0 +1,18 @@
+{% extends 'auditing/layout.html' %}
+{% load static %}
+{% block title %}
+    اضافة موظف استعلامات 
+{% endblock %}
+{% block content %}
+{% if error %}
+    <h1>{{ error }}</h1>
+{% endif %}
+{% if exist %}
+    <h1>{{exist}}</h1>
+{% endif %}
+    <form action="{% url 'register_reception' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="btn btn-primary" value=" تسجيل موظف استعلامات">
+    </form>
+{% endblock %}
